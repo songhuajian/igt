@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<!-- 基本样式引入 -->
+		<link rel="stylesheet" href="dist/css/jiben.css">
+		<!-- jquery引入 -->
+		<script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+		<!-- angular引入 -->
+		<script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+		<!-- angular路由引入 -->
+		<script type="text/javascript" src="lib/node_modules/angular-route/angular-route.js"></script>
+		<!-- 引入自己js -->
+		<script type="text/javascript" src="dist/js/jiben.js"></script>
+	</head>
+	<body ng-app="work" ng-controller="workController">
+		<div class="content">
+			<ul class="ml">
+				<li ng-repeat="other in dataList.otherName"><a href="javascript:void(0)">{{other.bar}}</a></li>
+			</ul>
+		<div class="mid-right">
+			<div class="right-top">
+				<h1>河南高速公路路况管制区间信息</h1>
+				<button>添加事件</button>
+				<button>添加管制</button>
+				<div class="color"></div>
+				<i id="i1"></i>管制
+				<i id="i2"></i>无管制
+				<i id="i3"></i>禁止七座
+			</div>
+			<div class="right-mid">
+				<table border="1" ng-repeat="data in dataList.firstName">
+					<tr>
+					<th rowspan="2"><a href="#">{{data.name}}</a></th>
+						<td width="{{more.long}}px" color="red" ng-repeat="more in data.lastName"><a href="#">{{more.road}}</a></td>
+					</tr>
+					<tr>
+						<td width="{{more1.long}}px" ng-repeat="more1 in data.lastName2"><a href="#">{{more1.road}}</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="right-footer"></div>
+		</div>
+	</div>
+	</body>
+</html>

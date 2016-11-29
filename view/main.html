@@ -1,0 +1,32 @@
+<div class="content">
+			<ul class="ml">
+				<li ng-repeat="other in dataList.otherName"><a href="javascript:void(0)">{{other.bar}}</a></li>
+			</ul>
+			<div class="mid-right">
+				<div class="right-top">
+					<h1>河南高速公路路况管制区间信息</h1>
+					<button>添加事件</button>
+					<button>添加管制</button>
+					<div class="color"></div>
+					<i id="i1"></i>管制
+					<i id="i2"></i>无管制
+					<i id="i3"></i>禁止七座
+				</div>
+				<div class="right-mid">
+					<table border="1" ng-repeat="data in dataList.firstName">
+						<tr>
+						<th rowspan="2"><a href="#">{{data.name}}</a></th>
+							<td width="{{more.long}}px" ng-repeat="more in data.lastName"><a href="#">{{more.road}}</a></td>
+						</tr>
+						<tr>
+							<td width="{{more.long}}px" ng-repeat="more in data.lastName"><a href="#">{{more.road}}</a></td>
+<!-- 							<td><a href="#">连霍至开封段</a></td>
+							<td><a href="#">连霍至郑州段</a></td>
+							<td><a href="#">偃师至义马段</a></td>
+							<td><a href="#">三门峡至省界段</a></td> -->
+						</tr>
+					</table>
+				</div>
+				<div class="right-footer"></div>
+			</div>
+		</div>
